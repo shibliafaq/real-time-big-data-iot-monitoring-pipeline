@@ -1,0 +1,31 @@
+# Python compilation files
+__pycache__/
+*.pyc
+
+# Virtual Environment (if you created one locally)
+venv/
+.env
+
+# IDE Settings (VS Code, PyCharm, etc.)
+.idea/
+.vscode/
+*.swp
+
+# OS System Files
+.DS_Store
+Thumbs.db
+
+# --- PROJECT SPECIFIC IGNORES ---
+
+# Spark Checkpoints
+# Your spark_streaming.py creates this folder to save state. 
+# It is large and specific to your local machine.
+checkpoint/
+
+# PostgreSQL Data Volume
+# Your docker-compose.yml maps this folder to store database files.
+# NEVER commit database files to GitHub.
+postgres_data/
+
+# Logs
+*.log
