@@ -6,12 +6,15 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-blue.svg)](https://postgresql.org)
 
-> **ICS-574: Big Data Analytics - Course Project**  
+>  **ICS-574: Big Data Analytics - Course Project**  
 > King Fahd University of Petroleum and Minerals  
 > Fall 2025
 
 ## 📋 Project Overview
 
+> Real-Time IoT Monitoring Pipeline
+> Shibli Afaq (g202520970)
+> Sultan Aldhafeeri (g202512390)
 This project implements a **complete end-to-end Big Data pipeline** for real-time IoT sensor monitoring in a Smart City context. The system ingests simulated sensor data from 10 locations, processes it through a streaming pipeline, stores it in a database, and visualizes it through an interactive dashboard with ML-powered predictions.
 
 ### 🎯 Key Features
