@@ -88,19 +88,30 @@ def fetch_data_by_date_range(start_date, end_date):
 
 @st.cache_data(ttl=5)
 def fetch_recent_data(hours=24):
-    """Fetch sensor readings from last X hours"""
     conn = get_db_connection()
     if not conn:
         return pd.DataFrame()
 
     try:
-        query = f"""
+        # OLD CODE (Delete or Comment out these lines)
+        # query = f"""
+        #     SELECT sensor_id, location, timestamp, temperature, humidity, pressure
+        #     FROM sensor_readings
+        #     WHERE timestamp >= NOW() - INTERVAL '{hours} hours'
+        #     ORDER BY timestamp DESC
+        # """
+        # df = pd.read_sql(query, conn)
+
+        # NEW FIXED CODE (Paste this instead)
+        cutoff_time = datetime.now() - timedelta(hours=hours)
+        query = """
             SELECT sensor_id, location, timestamp, temperature, humidity, pressure
             FROM sensor_readings
-            WHERE timestamp >= NOW() - INTERVAL '{hours} hours'
+            WHERE timestamp >= %s
             ORDER BY timestamp DESC
         """
-        df = pd.read_sql(query, conn)
+        df = pd.read_sql(query, conn, params=(cutoff_time,))
+        
         df['location_clean'] = df['location'].apply(clean_location_name)
         return df
     except Exception as e:
