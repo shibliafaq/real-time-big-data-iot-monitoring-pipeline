@@ -90,7 +90,7 @@ iot-monitoring-pipeline/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/iot-monitoring-pipeline.git
+git clone https://github.com/YOUR_USERNAME/real-time-big-data-iot-monitoring-pipeline.git
 cd iot-monitoring-pipeline
 ```
 
