@@ -60,7 +60,7 @@ This project implements a **complete end-to-end Big Data pipeline** for real-tim
 ## 📁 Project Structure
 
 ```
-iot-monitoring-pipeline/
+real-time-big-data-iot-monitoring-pipeline/
 ├── docker-compose.yml          # Docker services (Kafka, Zookeeper, PostgreSQL, Mosquitto)
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # Project documentation
@@ -91,7 +91,7 @@ iot-monitoring-pipeline/
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/real-time-big-data-iot-monitoring-pipeline.git
-cd iot-monitoring-pipeline
+cd real-time-big-data-iot-monitoring-pipeline
 ```
 
 ### 2. Start Docker Services
@@ -268,11 +268,10 @@ Access Spark UI at: **http://localhost:4040**
 
 ## 👥 Team Members
 
-| Name | Student ID | Role |
-|------|------------|------|
-| [Your Name] | [ID] | [Role] |
-| [Team Member 2] | [ID] | [Role] |
-| [Team Member 3] | [ID] | [Role] |
+| Name | Student ID |
+|------|------------|
+| Shibli Afaq | g202520970 |
+| Sultan Aldhafeeri | g202512390 |
 
 ---
 
